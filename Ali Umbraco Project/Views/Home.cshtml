@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="container">
+           
+			<h2>@CurrentPage.Name</h2>
+         
+			@CurrentPage.bodyText
+			     <img src="@CurrentPage.image" alt="@CurrentPage.Name" />
+		
+            </div>
+    </div>
