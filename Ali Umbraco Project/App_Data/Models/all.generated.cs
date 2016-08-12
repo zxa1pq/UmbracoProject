@@ -7,7 +7,7 @@ using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
-[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
 // FILE: models.generated.cs
@@ -218,6 +218,121 @@ namespace Umbraco.Web.PublishedContentModels
 		public bool UmbracoNaviHide
 		{
 			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
+		}
+	}
+
+	/// <summary>Contact Page</summary>
+	[PublishedContentModel("contactPage")]
+	public partial class ContactPage : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "contactPage";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public ContactPage(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContactPage, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+	}
+
+	/// <summary>Contact Former</summary>
+	[PublishedContentModel("contactFormer")]
+	public partial class ContactFormer : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "contactFormer";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public ContactFormer(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContactFormer, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Contact City
+		///</summary>
+		[ImplementPropertyType("contactCity")]
+		public string ContactCity
+		{
+			get { return this.GetPropertyValue<string>("contactCity"); }
+		}
+
+		///<summary>
+		/// Contact Gender
+		///</summary>
+		[ImplementPropertyType("contactGender")]
+		public object ContactGender
+		{
+			get { return this.GetPropertyValue("contactGender"); }
+		}
+
+		///<summary>
+		/// Contact Message
+		///</summary>
+		[ImplementPropertyType("contactMessage")]
+		public string ContactMessage
+		{
+			get { return this.GetPropertyValue<string>("contactMessage"); }
+		}
+
+		///<summary>
+		/// Contact name
+		///</summary>
+		[ImplementPropertyType("contactName")]
+		public string ContactName
+		{
+			get { return this.GetPropertyValue<string>("contactName"); }
+		}
+
+		///<summary>
+		/// Contact Postal
+		///</summary>
+		[ImplementPropertyType("contactPostal")]
+		public string ContactPostal
+		{
+			get { return this.GetPropertyValue<string>("contactPostal"); }
+		}
+
+		///<summary>
+		/// Contact Street
+		///</summary>
+		[ImplementPropertyType("contactStreet")]
+		public string ContactStreet
+		{
+			get { return this.GetPropertyValue<string>("contactStreet"); }
+		}
+
+		///<summary>
+		/// Site Title
+		///</summary>
+		[ImplementPropertyType("siteTitle")]
+		public string SiteTitle
+		{
+			get { return this.GetPropertyValue<string>("siteTitle"); }
 		}
 	}
 
