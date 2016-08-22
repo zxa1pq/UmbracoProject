@@ -12,15 +12,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
       <title>@CurrentPage.Name | @CurrentPage._siteTitle</title>
 
-      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      
      
-      <script src="/Scripts/jquery-ui/jquery-ui.js"></script>
-      <script src="/Scripts/jquery-ui/ui/autocomplete.js"></script>
-      <script src="~/Scripts/dawa-autocomplete/dawa-autocomplete.js"></script>
-
-      <script src="~/Scripts/script.js"></script>
       <link rel="stylesheet" href="~/Scripts/jquery-ui/themes/start/jquery-ui.css">
       <link rel="stylesheet" href="~/Scripts/jquery-ui/themes/start/theme.css">
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
@@ -39,13 +31,12 @@
       <header>
           <div class="container">
               <div class="row">
-                  <div class="">
+                  <div class="col-xs-8 col-sm-12 col-md-4">
                       <a href="@home.Url">
                           <div class="brand" style="background-image:url('@(home.SiteLogo)?height=65&width=205&bgcolor=000')"></div>
-
                       </a>
                   </div>
-                  <div class="col-sm-12 col-lg-12">
+                  <div class="col-sm-12 col-lg-8">
                       <nav>
                           @{ Html.RenderPartial("MainNavigation"); }
                       </nav>
@@ -67,5 +58,14 @@
               </div>
           </div>
       </footer>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/Scripts/jquery-ui/jquery-ui.js"></script>
+      <script src="/Scripts/jquery-ui/ui/autocomplete.js"></script>
+      <script src="~/Scripts/dawa-autocomplete/dawa-autocomplete.js"></script>
+      <script src="~/js/bootstrap.min.js"></script>
+      <script src="~/Scripts/script.js"></script>
   </body>
 </html>

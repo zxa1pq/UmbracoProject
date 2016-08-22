@@ -4,12 +4,14 @@
 	Layout = "Master.cshtml";
 }
 
+@CurrentPage.GetGridHtml("content", "fanoe")
 <div class="container-fluid">
     <div class="container">
            
 			<h2>@CurrentPage.Name</h2>
          
 			@CurrentPage.bodyText
+
 			     <img src="@CurrentPage.image" alt="@CurrentPage.Name" />
 		
             </div>
